@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+
+}
+
+.biodata {
+    grid-area: header;
+}
+
+.side {
+    grid-area: sider;
+}
+
+.informasi {
+    grid-area: main;
+}
+
+.riwayat {
+    grid-area: main2;
+}
+
+.prestasi {
+    grid-area: main3;
+}
+
+.prestasi {
+    grid-area: main4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'sider sider main main main main'
+        'sider sider main2 main2 main2 main2'
+        'sider sider main3 main3 main3 main3'
+        'sider sider main4 main4 main4 main4';
+
+    /* justify-content: center; */
+    margin-top: 48px;
+}
+
+.container .side {
+    width: 20%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.container .side .beranda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.container .side .beranda i a {
+    text-decoration: none;
+}
+
+.container .side .foto {
+    margin-top: 20px;
+}
+
+.container .side .foto img {
+    width: 100px;
+    height: 100px;
+}
+
+.container .informasi .tanggal,
+.alamat,
+.telepon,
+.email,
+.hobi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+
+.content {
+    float: right;
+    margin-left: 48px;
+    margin-top: -12px;
+}
+
+.content .heading {
+    font-size: 14px;
+    color: #404040
+}
+
+.content .isi {
+    font-weight: initial;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tahun {
+    color: #666666;
+}
+
+.sekolah {
+    font-weight: normal;
+}
+
+.none {
+    font-style: italic;
+    color: #666666;
+}
+
+@media screen and (min-device-width : 340px) and (max-device-width: 640px) {
+    .biodata {
+        grid-area: header;
+    }
+
+    .side {
+        grid-area: sider;
+    }
+
+    .informasi {
+        grid-area: main;
+    }
+
+    .riwayat {
+        grid-area: main2;
+    }
+
+    .prestasi {
+        grid-area: main3;
+    }
+
+    .prestasi {
+        grid-area: main4;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+            'header header header header header header'
+            'sider sider sider sider sider sider'
+            'main main main main main main'
+            'main2 main2 main2 main2 main2 main2'
+            'main3 main3 main3 main3 main3 main3'
+            'main4 main4 main4 main4 main4 main4';
+        /* justify-content: center; */
+        
+        -webkit-box-pack: center;
+        
+            -ms-flex-pack: center;
+        
+                justify-content: center;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 48px;
+    }
+    .foto{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .container .side {
+        width: 100%;
+    }
+}
+
+@media screen and (min-device-width : 768px) and (max-device-width: 1024px){
+    .informasi,.riwayat,.prestasi,.pengalaman{
+        margin-left: 48px;
+    }
+}

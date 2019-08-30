@@ -1,0 +1,696 @@
+*{
+    transition: all 0.5s;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+    display: grid;
+    grid-template-rows: 640px 640px 960px 640px 480px;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 640px;
+    min-height: 600px;
+    /* position: absolute; */
+    left: 0px;
+    top: 0px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(-0.81%, #348F50), color-stop(99.19%, #56B4D3));
+    background: linear-gradient(270deg, #348F50 -0.81%, #56B4D3 99.19%);
+    background-attachment: fixed;
+}
+
+.header .container {
+    width: 80%;
+    height: 640px;
+    min-height: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 284px;
+    grid-gap: 20px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header .container .name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+}
+
+.header .container .name .yahya {
+    font-size: 7vh;
+    color: antiquewhite;
+    font-weight: normal;
+    margin-top: 2px;
+}
+
+.header .container .name .subtitle {
+    font-size: 2vh;
+    font-weight: lighter;
+    color: antiquewhite;
+    margin-top: -12px;
+}
+
+.arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 62px;
+    height: 62px;
+    background-color:#EDEDED;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-top: -5vh;
+    position: relative;
+    cursor: pointer;
+
+}
+
+#chevron {
+    margin-top: 1vh;
+}
+
+.about {
+    width: 100%;
+    min-height: 640px;
+    background-color: #EDEDED;
+    position: relative;
+    display:grid;
+    -ms-flex-line-pack: start;
+        align-content: start;
+}
+
+.about .container {
+    width: 80%;
+    height: 640px;
+    margin: 0 auto;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-template-columns: 360px;
+    grid-gap: 10px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+
+}
+
+.about .container .aku {
+    margin-top: -60px;
+    text-align: center;
+}
+
+.saya {
+    margin: 0 auto;
+    width: 330px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 12px;
+}
+
+
+.bio {
+    margin-top: 1vh;
+    width: 330px;
+    height: 60px;
+    background: -webkit-gradient(linear, right top, left top, color-stop(-3.33%, #1BBA6E), color-stop(109.39%, #3E98E1));
+    background: linear-gradient(270deg, #1BBA6E -3.33%, #3E98E1 109.39%);
+    border-radius: 20px;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+.skills .container {
+    width: 80%;
+    height: 960px;
+    min-height: 720px;
+    margin: 0 auto;
+}
+
+.skills .container h1 {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.skills .container .myskill {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 4vw;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+}
+
+.myskill>div {
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.portofolio {
+    width: 100%;
+    min-height: 552px;
+    background-color: #EDEDED;
+}
+
+.portofolio .port {
+    text-align: center;
+    margin-top: 10vh;
+    opacity: 0;
+    -webkit-transform: translate(0,-40px);
+            transform: translate(0,-40px);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.portofolio .port.muncul {
+    text-align: center;
+    margin-top: 10vh;
+    opacity: 1;
+    -webkit-transform: translate(0,0);
+            transform: translate(0,0)
+}
+
+.portofolio .container {
+    width: 80%;
+    height: 640px;
+    min-height: 520px;
+    margin: 0 auto;
+}
+
+.listportofolio {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    opacity:0 ;
+    -webkit-transform: translate(0, -40px);
+            transform: translate(0, -40px);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.listportofolio.rise{
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+
+.findme .container {
+    margin: 0 auto;
+    width: 80%;
+    height: 480px;
+    min-height: 360px;
+}
+
+.findme .container h1 {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.findme .container .list {
+    margin-top: 10vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 60px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/*untuk layar device berukuran kecil*/
+@media screen and (min-device-width : 340px) and (max-device-width: 640px) {
+   
+    body {
+        display: grid;
+        grid-template-rows: 640px 640px 720px 1380px 100px;
+        grid-template-columns: 100%;
+        clear: both;
+    }
+
+    .header .container {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        /* align-content: space-around; */
+
+    }
+
+    .header .container .logo {
+        position: absolute;
+        top: 20%;
+        /* right: 18%;
+        display: grid; */
+    }
+
+    .header .container .logo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header .container .name {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 280px;
+
+    }
+
+    .header .container .name .yahya {
+        font-size: 5vh;
+        color: antiquewhite;
+        font-weight: normal;
+        margin-top: 2px;
+        text-align: center
+    }
+
+    .header .container .name .subtitle {
+        font-size: 1.8vh;
+        font-weight: lighter;
+        color: antiquewhite;
+        margin-top: -10px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .about{
+        height: 360px;
+    }
+
+    .about .container {
+        width: 100%;
+        height: 640px;
+        min-height: 640px;
+        display: grid;
+        grid-gap: -2px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        grid-template-columns: 100%;
+        -ms-flex-line-pack: start;
+            align-content: start;
+            margin-top: 96px;
+    }
+
+    .about .container .tentang {
+        text-align: center;
+        margin-top: 8vh;
+    }
+
+    .saya {
+        margin: 0 auto;
+        width: 330px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .button .bio {
+        margin-top: 6vh;
+    }
+
+    .button .bio p {
+        font-size: 2.5vh;
+        margin: 20px;
+    }
+
+    .skills{
+        height: 780px;
+        
+    }
+
+    .skills .container {
+        width: 100%;
+        height: 480px;
+    }
+    
+    .skills .container h1 {
+        text-align: center;
+        margin-top: 8vh;
+    }
+    
+    .skills .container .myskill {
+        margin-top: 8vh;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 4vw;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    
+    }
+    
+    .myskill>div {
+        font-size: 12px;
+        font-weight: lighter;
+        text-align: center;
+        width: 100px;
+        height: 150px;
+    }
+
+    .myskill div > object {
+        width: 50px;
+        height: 100px;
+    }
+
+    .myskill div > img {
+        width: 80px;
+    }
+
+    .portofolio {
+        width: 100%;
+        min-height: 552px;
+        background-color: #EDEDED;
+    }
+    
+    .portofolio h1 {
+        text-align: center;
+        margin-top: 8vh;
+    }
+    
+    .portofolio .container {
+        width: 100%;
+        height: 960px;
+        min-height: 520px;
+    }
+    
+    .listportofolio {
+        margin-top: 8vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 10px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .findme{
+        height: 240px;
+    }
+    .findme .container {
+        width: 100%;
+        height: 240px;
+        position: absolute;
+    }
+    
+    .findme .container h1 {
+        text-align: center;
+        margin-top: 8vh;
+    }
+    
+    .findme .container .list {
+        margin-top: 8vh;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 60px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+    .findme .container .list div a img{
+        width: 25px;
+        height: 25px;
+    }   
+}
+/*untuk layar device berukuran sedang*/
+@media screen and (min-device-width : 768px) and (max-device-width: 1024px){
+    body {
+        display: grid;
+        grid-template-rows: 640px 640px 780px 1380px 240px;
+        grid-template-columns: 100%;
+        clear: both;
+    }
+
+    .header .container {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        /* align-content: space-around; */
+
+    }
+
+    .header .container .logo {
+        position: absolute;
+        top: 10%;
+        /* right: 18%;
+        display: grid; */
+    }
+
+    .header .container .logo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header .container .name {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: 280px;
+
+    }
+
+    .header .container .name .yahya {
+        font-size: 5vh;
+        color: antiquewhite;
+        font-weight: normal;
+        margin-top: 2px;
+        text-align: center
+    }
+
+    .header .container .name .subtitle {
+        font-size: 1.8vh;
+        font-weight: lighter;
+        color: antiquewhite;
+        margin-top: -10px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .about{
+        height: 360px;
+    }
+
+    .about .container {
+        width: 100%;
+        height: 640px;
+        min-height: 640px;
+        display: grid;
+        grid-gap: 2px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        grid-template-columns: 100%;
+        -ms-flex-line-pack: start;
+            align-content: start;
+            margin-top: 96px;
+    }
+
+    .about .container .tentang {
+        text-align: center;
+        margin-top: 6vh;
+    }
+
+    .saya {
+        margin: 0 auto;
+        width: 330px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 14px;
+    }
+
+    .button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .button .bio {
+        margin-top: 6vh;
+    }
+
+    .button .bio p {
+        font-size: 2vh;
+        margin: 20px;
+    }
+
+    .skills{
+        height: 780px;
+    }
+
+    .skills .container {
+        width: 100%;
+        height: 780px;
+        position: absolute;
+        
+    }
+    
+    .skills .container h1 {
+        text-align: center;
+        margin-top: 6vh;
+        
+    }
+    
+    .skills .container .myskill {
+        /* margin-top: 8vh; */
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 4vw;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-top: -0.5vh;
+    
+    }
+    
+    .myskill>div {
+        font-size: 12px;
+        font-weight: lighter;
+        text-align: center;
+        width: 100px;
+        height: 150px;
+    }
+
+    .myskill div > object {
+        width: 50px;
+        height: 100px;
+    }
+
+    .myskill div > img {
+        width: 80px;
+    }
+
+    .portofolio {
+        width: 100%;
+        height:1380px;
+        background-color: #EDEDED;
+        position: relative;
+    }
+    
+    .portofolio h1 {
+        text-align: center;
+        margin-top: 8vh;
+    }
+    
+    .portofolio .container {
+        width: 100%;
+        height: 960px;
+        min-height: 520px;
+    }
+    
+    .listportofolio {
+        margin-top: 8vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 10px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    .findme{
+        margin-top: 20px;
+        height: 100px;
+        position: relative;
+    }
+    .findme .container {
+        width: 100%;
+        height: 100px;
+    }
+    
+    .findme .container h1 {
+        text-align: center;
+        margin-top: 8vh;
+    }
+    
+    .findme .container .list {
+        margin-top: 8vh;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 60px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+    .findme .container .list div a img{
+        width: 25px;
+        height: 25px;
+    }   
+}
